@@ -1,0 +1,34 @@
+﻿@model List<OgrenciNotMVC.Models.Entity.TBLNOTLAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>NOT ID</th>
+        <th>DERS</th>
+        <th>ÖĞRENCİ</th>
+        <th>SINAV1</th>
+        <th>SINAV2</th>
+        <th>SINAV3</th>
+        <th>PROJE</th>
+        <th>ORTALAMA</th>
+        <th>DURUM</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.NOTID</td>
+            <td>@item.DERSID</td>
+            <td>@item.OGRID</td>
+            <td>@item.SINAV1</td>
+            <td>@item.SINAV2</td>
+            <td>@item.SINAV3</td>
+            <td>@item.PROJE</td>
+            <td>@item.ORTALAMA</td>
+            <td>@item.DURUM</td>
+        </tr>
+    }
+</table>
+<a href="/Notlar/YeniNot/" class="btn btn-success">Yeni Not Girişi</a>

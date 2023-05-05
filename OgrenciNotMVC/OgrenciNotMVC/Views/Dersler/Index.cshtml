@@ -1,0 +1,21 @@
+﻿@model List<OgrenciNotMVC.Models.Entity.TBLDERSLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Ders ID</th>
+        <th>Ders Ad</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DERSID</td>
+            <td>@item.DERSAD</td>
+        </tr>
+    }
+</table>
+<a href="/Dersler/YeniDers/" class="btn btn-success">Yeni Ders Ekle</a>

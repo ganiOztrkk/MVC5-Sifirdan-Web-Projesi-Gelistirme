@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <form method="post">
+        <label>Sayı Giriniz</label>
+        <input type="text" name="sayi1" id="sayi1" class="form-control" />
+        <br />
+        <label>Sayı Giriniz</label>
+        <input type="text" name="sayi2" id="sayi2" class="form-control" />
+        <br />
+        <label class="form-control" style="margin-top: 10px; width: 25%;">Toplam: @ViewBag.sonucToplam</label>
+        <button class="btn btn-primary">Hesapla</button>
+    </form>
+</div>

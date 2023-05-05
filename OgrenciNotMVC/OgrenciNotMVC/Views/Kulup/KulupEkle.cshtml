@@ -1,0 +1,17 @@
+﻿@model OgrenciNotMVC.Models.Entity.TBLKULUPLER
+@{
+    ViewBag.Title = "KulupEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <form method="post">
+        <label>Kulüp Adı Giriniz</label>
+        <input type="text" name="KULUPAD" class="form-control" placeholder="Kulüp Adı" />
+        <br />
+        <label>Kulüp Kontenjan Giriniz</label>
+        <input type="text" name="KULUPKONTENJAN" class="form-control" placeholder="Kulüp Kontenjan" />
+        <br />
+        <button class="btn btn-success">Yeni Kulüp</button>
+    </form>
+</div>

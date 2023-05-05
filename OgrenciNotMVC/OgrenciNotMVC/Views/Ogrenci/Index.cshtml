@@ -1,0 +1,28 @@
+﻿@model List<OgrenciNotMVC.Models.Entity.TBLOGRENCILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>OĞRENCİ ID</th>
+        <th>ÖĞRENCİ AD</th>
+        <th>ÖĞRENCİ SOYAD</th>
+        <th>ÖĞRENCİ FOTOĞRAF</th>
+        <th>ÖĞRENCİ CİNSİYET</th>
+        <th>ÖĞRENCİ KULÜP</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.OGRENCIID</td>
+            <td>@item.OGRAD</td>
+            <td>@item.OGRSOYAD</td>
+            <td>@item.OGRFOTO</td>
+            <td>@item.OGRCINSIYET</td>
+            <td>@item.OGRKULUP</td>
+        </tr>
+    }
+</table>
+<a href="/Ogrenci/OgrenciEkle/" class="btn btn-success">Yeni Öğrenci Ekle</a>

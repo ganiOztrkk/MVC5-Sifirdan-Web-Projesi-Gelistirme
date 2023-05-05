@@ -1,0 +1,22 @@
+﻿@model List<OgrenciNotMVC.Models.Entity.TBLKULUPLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>KULÜP ID</th>
+        <th>KULÜP AD</th>
+        <th>KULÜP KONTENJAN</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.KULUPID</td>
+            <td>@item.KULUPAD</td>
+            <td>@item.KULUPKONTENJAN</td>
+        </tr>
+    }
+</table>
+<a href="/Kulup/KulupEkle/" class="btn btn-success">Yeni Kulüp Ekle</a>
