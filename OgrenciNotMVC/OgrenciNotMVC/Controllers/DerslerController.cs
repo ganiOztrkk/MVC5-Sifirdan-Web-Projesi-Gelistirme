@@ -10,7 +10,6 @@ namespace OgrenciNotMVC.Controllers
     public class DerslerController : Controller
     {
         DbMvcSchoolEntities db = new DbMvcSchoolEntities();
-        // GET: Dersler
         public ActionResult Index()
         {
             var values = db.TBLDERSLERs.ToList();
@@ -28,7 +27,31 @@ namespace OgrenciNotMVC.Controllers
         {
             db.TBLDERSLERs.Add(tbldersler);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DersSil(int id)
+        {
+            var ders = db.TBLDERSLERs.Find(id);
+            db.TBLDERSLERs.Remove(ders);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult DersGuncelle(int id)
+        {
+            var ders = db.TBLDERSLERs.Find(id);
+            return View("DersGuncelle", ders);
+        }
+
+        [HttpPost]
+        public ActionResult DersGuncelle(TBLDERSLER tbldersler)
+        {
+            var ders = db.TBLDERSLERs.Find(tbldersler.DERSID);
+            ders.DERSAD = tbldersler.DERSAD;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

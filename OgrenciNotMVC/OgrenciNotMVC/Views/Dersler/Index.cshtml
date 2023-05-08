@@ -9,12 +9,16 @@
     <tr>
         <th>Ders ID</th>
         <th>Ders Ad</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.DERSID</td>
             <td>@item.DERSAD</td>
+            <td><a href="/Dersler/DersSil/@item.DERSID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Dersler/DersGuncelle/@item.DERSID" class="btn btn-primary">Güncelle</a></td>
         </tr>
     }
 </table>

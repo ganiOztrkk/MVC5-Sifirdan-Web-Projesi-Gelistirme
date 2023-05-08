@@ -8,14 +8,16 @@
     <tr>
         <th>KULÜP ID</th>
         <th>KULÜP AD</th>
-        <th>KULÜP KONTENJAN</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.KULUPID</td>
             <td>@item.KULUPAD</td>
-            <td>@item.KULUPKONTENJAN</td>
+            <td><a href="/Kulup/KulupSil/@item.KULUPID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Kulup/KulupGuncelle/@item.KULUPID" class="btn btn-primary">Güncelle</a></td>
         </tr>
     }
 </table>

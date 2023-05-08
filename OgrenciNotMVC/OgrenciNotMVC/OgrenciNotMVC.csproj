@@ -600,6 +600,10 @@
     <Content Include="Views\Ogrenci\OgrenciEkle.cshtml" />
     <Content Include="Views\Hesap\Index.cshtml" />
     <Content Include="Views\Notlar\YeniNot.cshtml" />
+    <Content Include="Views\Kulup\KulupGuncelle.cshtml" />
+    <Content Include="Views\Dersler\DersGuncelle.cshtml" />
+    <Content Include="Views\Ogrenci\OgrenciGuncelle.cshtml" />
+    <Content Include="Views\Notlar\NotGuncelle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

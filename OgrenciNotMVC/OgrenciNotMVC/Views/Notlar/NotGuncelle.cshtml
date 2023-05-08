@@ -1,0 +1,38 @@
+﻿@model OgrenciNotMVC.Models.Entity.TBLNOTLAR
+@{
+    ViewBag.Title = "NotGuncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    @using (Html.BeginForm("NotGuncelle", "Notlar", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.NOTID)
+        <label>Ders</label>
+        @Html.TextBoxFor(x => x.DERSID, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Öğrenci</label>
+        @Html.TextBoxFor(x => x.OGRID, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Sınav 1</label>
+        @Html.TextBoxFor(x => x.SINAV1, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Sınav 2</label>
+        @Html.TextBoxFor(x => x.SINAV2, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Sınav 3</label>
+        @Html.TextBoxFor(x => x.SINAV3, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Proje</label>
+        @Html.TextBoxFor(x => x.PROJE, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Ortalama</label>
+        @Html.TextBoxFor(x => x.ORTALAMA, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Durum</label>
+        @Html.TextBoxFor(x => x.DURUM, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <button class="btn btn-default">Hesapla</button>
+        <button class="btn btn-info">Güncelle</button>
+    }
+</div>

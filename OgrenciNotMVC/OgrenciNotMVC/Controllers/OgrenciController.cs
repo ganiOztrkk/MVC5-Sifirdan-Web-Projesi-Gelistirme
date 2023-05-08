@@ -39,5 +39,33 @@ namespace OgrenciNotMVC.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult OgrenciSil(int id)
+        {
+            var ogrenci = db.TBLOGRENCILERs.Find(id);
+            db.TBLOGRENCILERs.Remove(ogrenci);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult OgrenciGuncelle(int id)
+        {
+            var ogrenci = db.TBLOGRENCILERs.Find(id);
+            return View("OgrenciGuncelle",ogrenci);
+        }
+
+        [HttpPost]
+        public ActionResult OgrenciGuncelle(TBLOGRENCILER tblogrenciler)
+        {
+            var ogrenci = db.TBLOGRENCILERs.Find(tblogrenciler.OGRENCIID);
+            ogrenci.OGRAD = tblogrenciler.OGRAD;
+            ogrenci.OGRSOYAD = tblogrenciler.OGRSOYAD;
+            ogrenci.OGRCINSIYET = tblogrenciler.OGRCINSIYET;
+            ogrenci.OGRKULUP = tblogrenciler.OGRKULUP;
+            ogrenci.OGRFOTO = tblogrenciler.OGRFOTO;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -1,0 +1,15 @@
+﻿@model OgrenciNotMVC.Models.Entity.TBLKULUPLER
+@{
+    ViewBag.Title = "KulupGuncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    @using (Html.BeginForm("KulupGuncelle", "Kulup", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.KULUPID)
+        <label>Ders Adı</label>
+        @Html.TextBoxFor(x => x.KULUPAD, new { @class = "form-control", @style = "width: 30%" })
+        <button class="btn btn-info" style="margin-top: 10px">Güncelle</button>
+    }
+</div>

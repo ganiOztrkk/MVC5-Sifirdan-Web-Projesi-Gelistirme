@@ -12,6 +12,8 @@
         <th>ÖĞRENCİ FOTOĞRAF</th>
         <th>ÖĞRENCİ CİNSİYET</th>
         <th>ÖĞRENCİ KULÜP</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -22,6 +24,8 @@
             <td>@item.OGRFOTO</td>
             <td>@item.OGRCINSIYET</td>
             <td>@item.OGRKULUP</td>
+            <td><a href="/Ogrenci/OgrenciSil/@item.OGRENCIID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Ogrenci/OgrenciGuncelle/@item.OGRENCIID" class="btn btn-primary">Güncelle</a></td>
         </tr>
     }
 </table>

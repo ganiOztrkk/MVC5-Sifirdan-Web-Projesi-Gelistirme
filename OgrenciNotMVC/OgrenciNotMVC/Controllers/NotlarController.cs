@@ -16,12 +16,25 @@ namespace OgrenciNotMVC.Controllers
             var values = db.TBLNOTLARs.ToList();
             return View(values);
         }
-
+        [HttpGet]
         public ActionResult YeniNot()
         {
             return View();
         }
 
+        [HttpPost]
+        public ActionResult YeniNot(TBLNOTLAR tblnotlar)
+        {
+            db.TBLNOTLARs.Add(tblnotlar);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
+        [HttpGet]
+        public ActionResult NotGuncelle(int id)
+        {
+            var not = db.TBLNOTLARs.Find(id);
+            return View("NotGuncelle",not);
+        }
     }
 }

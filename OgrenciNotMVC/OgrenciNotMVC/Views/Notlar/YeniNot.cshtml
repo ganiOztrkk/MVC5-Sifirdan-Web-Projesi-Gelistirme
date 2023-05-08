@@ -1,8 +1,35 @@
-﻿
+﻿@model OgrenciNotMVC.Models.Entity.TBLNOTLAR
 @{
     ViewBag.Title = "YeniNot";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>YeniNot</h2>
-
+<div class="container">
+    <form method="post">
+        <label>Ders Ad</label>
+        <input type="text" name="DERSID" class="form-control"/>
+        <br />
+        <label>Öğrenci ID</label>
+        <input type="text" name="OGRID" class="form-control"/>
+        <br />
+        <label>Sınav 1</label>
+        <input type="text" name="SINAV1" class="form-control"/>
+        <br />
+        <label>Sınav 2</label>
+        <input type="text" name="SINAV2" class="form-control"/>
+        <br />
+        <label>Sınav 3</label>
+        <input type="text" name="SINAV3" class="form-control"/>
+        <br />
+        <label>Proje</label>
+        <input type="text" name="PROJE" class="form-control"/>
+        <br />
+        <label>Ortalama</label>
+        <input type="text" name="ORTALAMA" class="form-control"/>
+        <br />
+        <label>Durum</label>
+        <input type="text" name="DURUM" class="form-control"/>
+        <br />
+        <button class="btn btn-success">Sınav Ekle</button>
+    </form>
+</div>
