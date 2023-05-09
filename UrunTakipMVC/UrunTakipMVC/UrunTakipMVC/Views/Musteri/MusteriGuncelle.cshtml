@@ -1,0 +1,25 @@
+﻿@model UrunTakipMVC.Models.Entity.Musteriler
+@{
+    ViewBag.Title = "MusteriGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    @using (Html.BeginForm("MusteriGuncelle", "Musteri", FormMethod.Post))
+    {
+        @Html.HiddenFor(x=>x.ID)
+        <label>Müşteri Ad</label>
+        @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Müşteri Soyad</label>
+        @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Müşteri Şehir</label>
+        @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Müşteri Bakiye</label>
+        @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control", @style = "width: 40%" })
+        <button class="btn btn-success" style="margin-top: 10px">Güncelle</button>
+    }
+</div>

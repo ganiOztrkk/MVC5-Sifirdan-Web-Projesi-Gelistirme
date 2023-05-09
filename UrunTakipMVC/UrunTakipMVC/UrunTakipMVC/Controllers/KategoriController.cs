@@ -25,6 +25,7 @@ namespace UrunTakipMVC.Controllers
         [HttpPost]
         public ActionResult KategoriEkle(Kategoriler kategoriler)
         {
+            kategoriler.Durum = true;
             db.Kategorilers.Add(kategoriler);
             db.SaveChanges();
             return RedirectToAction("Index");

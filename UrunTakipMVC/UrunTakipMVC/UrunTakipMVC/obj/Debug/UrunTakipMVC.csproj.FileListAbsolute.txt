@@ -81,3 +81,7 @@ C:\Users\gani9\Documents\GitHub\-MVC5-Sifirdan-Web-Projesi-Gelistirme\UrunTakipM
 C:\Users\gani9\Documents\GitHub\-MVC5-Sifirdan-Web-Projesi-Gelistirme\UrunTakipMVC\UrunTakipMVC\UrunTakipMVC\obj\Debug\UrunTakipMVC.csproj.CopyComplete
 C:\Users\gani9\Documents\GitHub\-MVC5-Sifirdan-Web-Projesi-Gelistirme\UrunTakipMVC\UrunTakipMVC\UrunTakipMVC\obj\Debug\UrunTakipMVC.dll
 C:\Users\gani9\Documents\GitHub\-MVC5-Sifirdan-Web-Projesi-Gelistirme\UrunTakipMVC\UrunTakipMVC\UrunTakipMVC\obj\Debug\UrunTakipMVC.pdb
+C:\Users\gani9\Documents\GitHub\-MVC5-Sifirdan-Web-Projesi-Gelistirme\UrunTakipMVC\UrunTakipMVC\UrunTakipMVC\bin\PagedList.dll
+C:\Users\gani9\Documents\GitHub\-MVC5-Sifirdan-Web-Projesi-Gelistirme\UrunTakipMVC\UrunTakipMVC\UrunTakipMVC\bin\PagedList.Mvc.dll
+C:\Users\gani9\Documents\GitHub\-MVC5-Sifirdan-Web-Projesi-Gelistirme\UrunTakipMVC\UrunTakipMVC\UrunTakipMVC\bin\PagedList.xml
+C:\Users\gani9\Documents\GitHub\-MVC5-Sifirdan-Web-Projesi-Gelistirme\UrunTakipMVC\UrunTakipMVC\UrunTakipMVC\bin\PagedList.Mvc.xml

@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace UrunTakipMVC.Models.Entity
 {
     using System;
@@ -21,7 +23,9 @@ namespace UrunTakipMVC.Models.Entity
         }
     
         public int ID { get; set; }
+        [Required(ErrorMessage = "Ad alaný boþ geçilemez...")]
         public string Ad { get; set; }
+        [Required(ErrorMessage = "Soyad alaný boþ geçilemez...")]
         public string Soyad { get; set; }
         public string Sehir { get; set; }
         public Nullable<decimal> Bakiye { get; set; }

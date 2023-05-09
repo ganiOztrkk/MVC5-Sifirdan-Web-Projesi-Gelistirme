@@ -32,6 +32,7 @@ namespace UrunTakipMVC.Controllers
         [HttpPost]
         public ActionResult UrunEkle(Urunler urunler)
         {
+            urunler.Durum = true;
             var kategori = db.Kategorilers.FirstOrDefault(x => x.ID == urunler.Kategoriler.ID);
             urunler.Kategoriler = kategori;
             db.Urunlers.Add(urunler);
