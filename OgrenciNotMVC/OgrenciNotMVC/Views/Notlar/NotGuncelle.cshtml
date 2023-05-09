@@ -27,12 +27,13 @@
         @Html.TextBoxFor(x => x.PROJE, new { @class = "form-control", @style = "width: 40%" })
         <br />
         <label>Ortalama</label>
-        @Html.TextBoxFor(x => x.ORTALAMA, new { @class = "form-control", @style = "width: 40%" })
+        @Html.TextBoxFor(x => x.ORTALAMA, new { @class = "form-control", @style = "width: 40%", @Value= ViewBag.ort })
         <br />
         <label>Durum</label>
         @Html.TextBoxFor(x => x.DURUM, new { @class = "form-control", @style = "width: 40%" })
         <br />
-        <button class="btn btn-default">Hesapla</button>
-        <button class="btn btn-info">Güncelle</button>
+        <button type="submit" name="Islem" value="HESAPLA" class="btn btn-default">Hesapla</button>
+        <br/><br/>
+        <button type="submit" name="Islem" value="GUNCELLE" class="btn btn-info">Güncelle</button>
     }
 </div>

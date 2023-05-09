@@ -7,7 +7,7 @@
 <div class="container">
     @using (Html.BeginForm("OgrenciGuncelle", "Ogrenci", FormMethod.Post))
     {
-        @Html.HiddenFor(x=>x.OGRENCIID)
+        @Html.HiddenFor(x => x.OGRENCIID)
         <label>Öğrenci Ad</label>
         @Html.TextBoxFor(x => x.OGRAD, new { @class = "form-control" })
         <br />
@@ -18,7 +18,7 @@
         @Html.TextBoxFor(x => x.OGRCINSIYET, new { @class = "form-control" })
         <br />
         <label>Öğrenci Kulüp</label>
-        @Html.TextBoxFor(x => x.OGRKULUP, new { @class = "form-control" })
+        @Html.DropDownListFor(x => x.TBLKULUPLER.KULUPID, (List<SelectListItem>)ViewBag.kulupler, "Külüp Seçiniz", new { @class = "form-control" })
         <br />
         <label>Öğrenci Fotoğraf</label>
         @Html.TextBoxFor(x => x.OGRFOTO, new { @class = "form-control" })

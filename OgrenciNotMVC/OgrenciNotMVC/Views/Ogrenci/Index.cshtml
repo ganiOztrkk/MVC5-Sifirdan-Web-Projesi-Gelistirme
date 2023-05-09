@@ -9,7 +9,7 @@
         <th>OĞRENCİ ID</th>
         <th>ÖĞRENCİ AD</th>
         <th>ÖĞRENCİ SOYAD</th>
-        <th>ÖĞRENCİ FOTOĞRAF</th>
+        @*<th>ÖĞRENCİ FOTOĞRAF</th>*@
         <th>ÖĞRENCİ CİNSİYET</th>
         <th>ÖĞRENCİ KULÜP</th>
         <th>SİL</th>
@@ -21,9 +21,9 @@
             <td>@item.OGRENCIID</td>
             <td>@item.OGRAD</td>
             <td>@item.OGRSOYAD</td>
-            <td>@item.OGRFOTO</td>
+            @*<td>@item.OGRFOTO</td>*@
             <td>@item.OGRCINSIYET</td>
-            <td>@item.OGRKULUP</td>
+            <td>@item.TBLKULUPLER.KULUPAD</td>
             <td><a href="/Ogrenci/OgrenciSil/@item.OGRENCIID" class="btn btn-danger">Sil</a></td>
             <td><a href="/Ogrenci/OgrenciGuncelle/@item.OGRENCIID" class="btn btn-primary">Güncelle</a></td>
         </tr>

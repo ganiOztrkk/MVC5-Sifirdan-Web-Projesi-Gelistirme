@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OgrenciNotMVC.Models;
 using OgrenciNotMVC.Models.Entity;
 
 namespace OgrenciNotMVC.Controllers
@@ -35,6 +36,29 @@ namespace OgrenciNotMVC.Controllers
         {
             var not = db.TBLNOTLARs.Find(id);
             return View("NotGuncelle",not);
+        }
+
+        [HttpPost]
+        public ActionResult NotGuncelle(TBLNOTLAR tblnotlar, Hesap hesap, int sinav1=0, int sinav2 = 0, int sinav3 = 0, int proje = 0)
+        {
+            if (hesap.Islem == "HESAPLA")
+            {
+                int ortalama = (sinav1 + sinav2 + sinav3 + proje) / 4;
+                ViewBag.ort = ortalama;
+            }
+
+            if (hesap.Islem == "GUNCELLE")
+            {
+                var sinav = db.TBLNOTLARs.Find(tblnotlar.NOTID);
+                sinav.SINAV1 = tblnotlar.SINAV1;
+                sinav.SINAV2 = tblnotlar.SINAV2;
+                sinav.SINAV3 = tblnotlar.SINAV3;
+                sinav.ORTALAMA = tblnotlar.ORTALAMA;
+                sinav.PROJE = tblnotlar.PROJE;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
     }
 }

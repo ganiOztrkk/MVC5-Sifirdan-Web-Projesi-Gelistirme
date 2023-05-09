@@ -52,6 +52,13 @@ namespace OgrenciNotMVC.Controllers
         public ActionResult OgrenciGuncelle(int id)
         {
             var ogrenci = db.TBLOGRENCILERs.Find(id);
+            List<SelectListItem> kulup = (from i in db.TBLKULUPLERs.ToList()
+                select new SelectListItem()
+                {
+                    Text = i.KULUPAD,
+                    Value = i.KULUPID.ToString()
+                }).ToList();
+            ViewBag.kulupler = kulup;
             return View("OgrenciGuncelle",ogrenci);
         }
 
@@ -62,7 +69,7 @@ namespace OgrenciNotMVC.Controllers
             ogrenci.OGRAD = tblogrenciler.OGRAD;
             ogrenci.OGRSOYAD = tblogrenciler.OGRSOYAD;
             ogrenci.OGRCINSIYET = tblogrenciler.OGRCINSIYET;
-            ogrenci.OGRKULUP = tblogrenciler.OGRKULUP;
+            ogrenci.OGRKULUP = tblogrenciler.TBLKULUPLER.KULUPID;
             ogrenci.OGRFOTO = tblogrenciler.OGRFOTO;
             db.SaveChanges();
             return RedirectToAction("Index");
