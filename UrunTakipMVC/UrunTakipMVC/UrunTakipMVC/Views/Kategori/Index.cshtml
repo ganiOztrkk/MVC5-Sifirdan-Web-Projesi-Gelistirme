@@ -1,0 +1,26 @@
+﻿@model List<UrunTakipMVC.Models.Entity.Kategoriler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Kategori Ad</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Ad</td>
+                <td><a href="/Kategori/KategoriSil/@item.ID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Kategori/KategoriGuncelle/@item.ID" class="btn btn-info">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Kategori/KategoriEkle/" class="btn btn-success" style="margin-bottom: 10px">Yeni Kategori</a>
+</div>

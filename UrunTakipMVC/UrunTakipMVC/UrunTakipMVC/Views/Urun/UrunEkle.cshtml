@@ -1,0 +1,29 @@
+﻿@model UrunTakipMVC.Models.Entity.Urunler
+@{
+    ViewBag.Title = "UrunEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <form method="post">
+        <label>Ürün Adı</label>
+        @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Ürün Marka</label>
+        @Html.TextBoxFor(x => x.Marka, new { @class = "form-control", @style = "width: 40%" })
+        <br />        <br />
+        <label>Ürün Stok</label>
+        @Html.TextBoxFor(x => x.Stok, new { @class = "form-control", @style = "width: 40%" })
+        <br />        <br />
+        <label>Ürün Alış Fiyat</label>
+        @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control", @style = "width: 40%" })
+        <br />        <br />
+        <label>Ürün Satış Fiyat</label>
+        @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control", @style = "width: 40%" })
+        <br />        <br />
+        <label>Ürün Kategori</label>
+        @Html.DropDownListFor(x => x.Kategoriler.ID, (List<SelectListItem>)ViewBag.vKategori, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <button class="btn btn-success" style="margin-top: 10px">Ekle</button>
+    </form>
+</div>

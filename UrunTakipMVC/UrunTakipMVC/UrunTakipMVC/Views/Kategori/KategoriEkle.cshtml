@@ -1,0 +1,13 @@
+﻿@model UrunTakipMVC.Models.Entity.Kategoriler
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <form method="post">
+        <label>Kategori Adı</label>
+        <input type="text" name="Ad" class="form-control" style="width: 40%" />
+        <button class="btn btn-success" style="margin-top: 10px">Ekle</button>
+    </form>
+</div>
