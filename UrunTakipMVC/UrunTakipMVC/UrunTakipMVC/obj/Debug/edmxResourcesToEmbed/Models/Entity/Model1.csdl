@@ -132,5 +132,14 @@
       <End Role="Urunler" EntitySet="Urunlers" />
       <End Role="Satislar" EntitySet="Satislars" />
     </AssociationSet>
+    <EntitySet Name="Adminlers" EntityType="DbStokMVCModel.Adminler" />
   </EntityContainer>
+  <EntityType Name="Adminler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

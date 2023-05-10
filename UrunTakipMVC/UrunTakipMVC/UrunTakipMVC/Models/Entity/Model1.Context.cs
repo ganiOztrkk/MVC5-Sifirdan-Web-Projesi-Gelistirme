@@ -30,5 +30,6 @@ namespace UrunTakipMVC.Models.Entity
         public virtual DbSet<Personeller> Personellers { get; set; }
         public virtual DbSet<Satislar> Satislars { get; set; }
         public virtual DbSet<Urunler> Urunlers { get; set; }
+        public virtual DbSet<Adminler> Adminlers { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace UrunTakipMVC.Controllers
     public class KategoriController : Controller
     {
         private DbStokMVCEntities db = new DbStokMVCEntities();
+        [Authorize]
         // GET: Kategori
         public ActionResult Index()
         {

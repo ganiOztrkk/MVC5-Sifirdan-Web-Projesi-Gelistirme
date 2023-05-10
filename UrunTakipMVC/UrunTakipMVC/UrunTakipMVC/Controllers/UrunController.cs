@@ -10,6 +10,7 @@ namespace UrunTakipMVC.Controllers
     public class UrunController : Controller
     {
         DbStokMVCEntities db = new DbStokMVCEntities();
+        [Authorize]
         public ActionResult Index()
         {
             var urunler = db.Urunlers.Where(x=>x.Durum == true).ToList();

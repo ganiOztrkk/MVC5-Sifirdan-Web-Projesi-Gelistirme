@@ -1,0 +1,23 @@
+﻿@model UrunTakipMVC.Models.Entity.Satislar
+@{
+    ViewBag.Title = "SatisEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <form method="post">
+        <label>Ürün</label>
+        @Html.DropDownListFor(x=>x.Urunler.ID,(List<SelectListItem>)ViewBag.urun, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Personel</label>
+        @Html.DropDownListFor(x=>x.Personeller.ID,(List<SelectListItem>)ViewBag.personel, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Müşteri</label>
+        @Html.TextBoxFor(x => x.Musteri, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <label>Fiyat</label>
+        @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control", @style = "width: 40%" })
+        <br />
+        <button class="btn btn-success" style="margin-top: 10px">Satış İşlemi</button>
+    </form>
+</div>

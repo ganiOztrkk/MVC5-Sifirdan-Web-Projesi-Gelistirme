@@ -11,6 +11,7 @@ namespace UrunTakipMVC.Controllers
     public class MusteriController : Controller
     {
         DbStokMVCEntities db = new DbStokMVCEntities();
+        [Authorize]
         public ActionResult Index(int sayfa =1)
         {
             var musteriler = db.Musterilers.Where(x => x.Durum == true).ToList().ToPagedList(sayfa, 3);

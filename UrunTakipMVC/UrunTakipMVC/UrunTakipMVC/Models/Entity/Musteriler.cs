@@ -23,9 +23,9 @@ namespace UrunTakipMVC.Models.Entity
         }
     
         public int ID { get; set; }
-        [Required(ErrorMessage = "Ad alaný boþ geçilemez...")]
+        [Required(ErrorMessage = "Ad Boþ Geçilemez")]
         public string Ad { get; set; }
-        [Required(ErrorMessage = "Soyad alaný boþ geçilemez...")]
+        [Required(ErrorMessage = "Soyad Boþ Geçilemez")]
         public string Soyad { get; set; }
         public string Sehir { get; set; }
         public Nullable<decimal> Bakiye { get; set; }
